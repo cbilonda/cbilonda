@@ -1,0 +1,120 @@
+/* Reset des styles par défaut du navigateur */
+body, h1, p, table {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-image: url("Acellus-AP-Computer-Science.jpg");
+  color: #000;
+
+}
+
+main {
+  max-width: 850px;
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  color: #61a6b9;
+  font-size: 3em;
+  font-family: 'Times New Roman', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2{
+  color: #61a6b9;
+}
+
+.formulairePourBDProf {
+  margin-top: 20px;
+  display: flexbox;
+}
+
+#requetes {
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  resize: none;
+  padding: 7px 25px;
+  margin: 4px 7px;
+  position: relative;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+    font-size: 10px;
+    display: flex;
+}
+
+
+input[type="submit"]:hover {
+  background-color: #aba580;
+}
+
+.affichageBD table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #e0e8f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.affichageBD table, .affichageBD th, .affichageBD td {
+  transition: background-color 0.3s; /* Ajout d'une transition pour un effet fluide */
+  background-color: #f4f8fb;
+}
+
+/* Effet de survol */
+.affichageBD tr:hover {
+  background-color: #f2f2f2; /* Couleur de fond au survol */
+}
+
+/* Styles supplémentaires pour les cellules au survol */
+.affichageBD tr:hover td {
+  color: #b4a6a6;
+}
+
+
+
+.affichageBD th, .affichageBD td {
+  border: 1px solid #a5b9c7;
+  padding: 12px;
+  text-align: left;
+  background-color: rgba(255,255,255,0.2);
+}
+
+/*Style pour les lignes alternées de la table*/
+tr:hover{
+  background-color: #d6d3ce;
+}
+
+tr:nth-child(even) {
+  background-color: #edf5fc;
+}
+
+tr:nth-child(even):hover{
+  background-color: #fff;
+}
+  
+
+.affichageBD th {
+  background-color: #55608f;
+}
+
+.affichageDesErreurs {
+  color: #d9534f;
+  margin-top: 10px;
+}
+

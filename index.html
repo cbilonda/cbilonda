@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width" , initial-scale="1.0">
+    <title>Ma page web</title>
+    <script type="text/javascript" src="js\gestionFormulaire.js" defer></script>
+    <script src="https://kit.fontawesome.com/429a9174f5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <h1><b>Projet 2023</b></h1>
+        <h2><i>Présenté par : Cristal Bilonda Kayembe</i></h2>
+
+        <form class="formulairePourBDProf">
+        <select name="requete" id="requetes" style="display: inline-block;">
+            <option value="SELECT AVG(`Effectif`) FROM ESR">Effectif moyen total</option>
+            <option value="SELECT SUM(`effectif Ingénieurs`),`Type établissement` FROM ESR GROUP BY `Type établissement` ORDER BY `effectif Ingénieurs`DESC">Effectif d'ingénieurs par type d'établissement</option>
+            <option value="SELECT `Secteur`, `Type établissement`,`a des effectifs en DUT`,SUM(`Effectif DUT`) FROM ESR WHERE `a des effectifs en DUT`='oui' GROUP BY `Type établissement`">Type d'établissement par effectif en DUT</option>
+            <option value="SELECT `Type établissement`,`a des effectifs en ingénieurs`,SUM(`effectif Ingénieurs`) FROM ESR WHERE `a des effectifs en ingénieurs`='oui' GROUP BY `Type établissement`">Effectifs d'ingénieurs par établissement</option>
+            <option value="SELECT DISTINCT `Année`, `Type établissement`, `a des effectifs en ingénieurs`,`effectif Ingénieurs`  FROM ESR WHERE `a des effectifs en ingénieurs`='oui' ">Type d'établissement par rentrée</option>
+            <option value="SELECT DISTINCT `Rentrée universitaire`,`Type établissement`,SUM(`Effectif`),`Sexe` FROM ESR WHERE `sexe`='Féminin' ">Effectif féminin en école de commerce en 2006</option>
+            <option value="SELECT `Année`,AVG(`Effectif`) FROM ESR WHERE `Année`='2006'" >Effectifs moyen en 2006</option>
+
+        </select>
+
+           <button type="submit" value="Envoyer" style="display: inline-block;"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+
+        </form>
+
+        <div class="affichageBD">
+            <table>
+            </table>
+            <div>
+            </div>
+
+        </div>
+
+        <p class="affichageDesErreurs"> </p>
+    
+    </main>
+</body>
+</html>
